@@ -34,7 +34,7 @@ The project combines a FastAPI backend with a dynamic HTML/CSS/JavaScript fronte
 ---
 
 ## 📂 Project Structure
-TripFluencer/
+```TripFluencer/
 │
 ├── main.py # FastAPI backend
 ├── requirements.txt # Dependencies
@@ -45,7 +45,7 @@ TripFluencer/
 ├── static/
 │ ├── styles.css # Styling
 │ └── script.js # Frontend logic
-
+```
 ---
 
 ## ⚙️ Installation & Setup
@@ -56,21 +56,22 @@ git clone https://github.com/AnanyaGupta07/TRIPFLUENCER.git
 cd TRIPFLUENCER
 
 ### 2️⃣ Create virtual environment
-python -m venv .venv
+```python -m venv .venv
 source .venv/bin/activate # Mac/Linux
+```
 
 ### 3️⃣ Install dependencies
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 
 ### 4️⃣ Add Environment Variable
 
 Create a `.env` file:
-GEMINI_API_KEY=your_api_key_here
+```GEMINI_API_KEY=your_api_key_here```
 
 ## ▶️ Run the Application
-uvicorn main:app --reload
+```uvicorn main:app --reload```
 
-Open in browser:http://127.0.0.1:8000
+Open in browser:```http://127.0.0.1:8000```
 
 ---
 

@@ -1,0 +1,88 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: 'Nunito', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color: #0f172a; background: #fefce8; }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+/* Hero */
+.hero { position: relative; overflow: hidden; border-radius: 18px; padding: 24px; background: linear-gradient(135deg,#7dd3fc,#fde68a); border: 2px solid #fca5a5; box-shadow: 0 8px 30px rgba(17,24,39,0.08); }
+.hero-bg { position: absolute; inset: 0; pointer-events: none; }
+.bg-layer { position: absolute; inset: 0; width: 100%; height: 100%; }
+.hero-content { position: relative; display: grid; grid-template-columns: 1fr; gap: 16px; align-items: center; }
+@media (min-width: 760px) { .hero-content { grid-template-columns: 280px 1fr; } }
+
+.bot-illustration { display: flex; align-items: center; justify-content: center; }
+.hero-text h1 { font-family: 'Baloo 2', cursive; margin: 8px 0 2px; font-size: 38px; color: #1e293b; letter-spacing: 0.3px; }
+.subhead { margin: 0 0 12px; color: #0f766e; font-weight: 700; }
+
+/* Floating animated elements */
+.float { position: absolute; bottom: -40px; left: var(--x); width: 28px; height: 28px; animation: floatUp 10s linear infinite; animation-delay: var(--delay); opacity: .85; }
+.balloon { background: radial-gradient(circle at 30% 30%, #fca5a5, #f97316); border-radius: 50%; }
+.paper-plane { clip-path: polygon(0 50%, 100% 0, 60% 55%, 100% 100%); background: #eab308; transform: rotate(15deg); }
+.rocket { background: linear-gradient(180deg,#22c55e,#16a34a); border-radius: 6px; box-shadow: 0 -10px 0 0 #f43f5e inset; }
+@keyframes floatUp { from { transform: translateY(0) translateX(0); } to { transform: translateY(-120vh) translateX(-10vw); } }
+
+/* Cards */
+.card { background: #ffffff; border: 2px solid #f59e0b; border-radius: 18px; padding: 16px; margin-top: 16px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+
+.grid-2 { display: grid; grid-template-columns: 1fr; gap: 12px; }
+@media (min-width: 640px) { .grid-2 { grid-template-columns: 1fr 1fr; } }
+
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+label { font-size: 14px; color: #1f2937; font-weight: 700; }
+input, select { padding: 12px 14px; border: 2px solid #86efac; border-radius: 14px; font-size: 16px; background: #fff; outline: none; transition: border-color .2s, box-shadow .2s; }
+input::placeholder { color: #9ca3af; font-style: italic; }
+input:focus, select:focus { border-color: #22c55e; box-shadow: 0 0 0 4px rgba(34,197,94,0.2); }
+
+.actions { display: flex; gap: 10px; margin-top: 8px; flex-wrap: wrap; }
+button { cursor: pointer; border: none; border-radius: 14px; padding: 12px 18px; font-weight: 800; letter-spacing: .2px; }
+.cta { background: #f97316; color: #fff; box-shadow: 0 6px 0 #ea580c; }
+.cta:hover { background: #fb923c; }
+.squish { border-radius: 18px 18px 20px 20px; transform: translateY(0); transition: transform .05s; }
+.squish:active { transform: translateY(3px); box-shadow: 0 3px 0 #ea580c; }
+button.secondary { background: #22c55e; color: #0f172a; box-shadow: 0 6px 0 #16a34a; }
+button.secondary:hover { background: #34d399; }
+
+/* Output markdown */
+.output { overflow: hidden; }
+.markdown { white-space: pre-wrap; line-height: 1.6; }
+.markdown h1 { font-family: 'Baloo 2', cursive; color: #0f172a; }
+.markdown h2 { margin: 10px 0 8px; font-size: 22px; color: #1e293b; }
+.markdown h3 { margin: 8px 0 6px; font-size: 18px; color: #0f766e; }
+.markdown a { color: #2563eb; text-decoration: none; }
+.markdown a:hover { text-decoration: underline; }
+
+footer { text-align: center; color: #64748b; margin: 16px 0; }
+
+/* --- NEW LOADER CSS --- */
+
+/* Container for the loading spinner */
+#loader-container {
+  display: none; /* Hide it by default */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* The actual spinner */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3; /* Light grey */
+  border-top: 5px solid #3498db; /* Blue */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+/* Text below the spinner */
+#loader-container p {
+  font-size: 1.1em;
+  color: #0f172a; /* Matched your body color */
+}
+
+/* Animation for the spin */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

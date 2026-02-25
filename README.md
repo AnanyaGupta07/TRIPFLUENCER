@@ -97,7 +97,7 @@ Open in browser:```http://127.0.0.1:8000```
 
 **Ananya Gupta**  
 BTech (AI & Data Science) 
-Linkedin:(https://www.linkedin.com/in/ananya-gupta-4a5a81332/)
+Linkedin:(https://www.linkedin.com/in/ananya-gupta-tech/)
 
 
 
